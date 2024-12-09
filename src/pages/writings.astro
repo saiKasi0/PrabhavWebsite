@@ -1,0 +1,58 @@
+---
+import AdminBlogPage from '../components/AdminBlogPage.jsx';
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout title="Interests">
+	<main>
+		<h1>
+			<span class="text-gradient">Things I'm saying </span>
+		</h1>
+
+		<div class="grid gap-8">
+            <AdminBlogPage />
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 90%;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	h1 {
+		font-size: 5rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.grid {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.grid-cols-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	p {
+		margin: 0;
+		text-align: left;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+</style>

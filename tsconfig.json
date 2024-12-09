@@ -1,8 +1,41 @@
 {
-  "baseUrl": ".",
-  "paths": {
-    "three": ["./node_modules/three/build/three.module.js"]
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "allowImportingTsExtensions": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "checkJs": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "ES2022"
+    ],
+    "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "incremental": true,
+    "baseUrl": ".",
+    "jsxImportSource": "react"
   },
-  "extends": "astro/tsconfigs/strict",
-  "exclude": ["node_modules/"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
